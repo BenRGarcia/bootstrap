@@ -162,7 +162,9 @@
               </li>
               <li> 
               Paste the following into the <code>.bash_profile</code> file
-<pre><button onclick="copyToClipboard('#terminalconfig')"><i class="far fa-clipboard"></i> Copy</button><code id="terminalconfig">#The below statements will print to the terminal upon opening bash window
+              <br>
+              <button onclick="copyToClipboard('#terminalconfig')"><i class="far fa-clipboard"></i> Copy</button>
+<pre><code id="terminalconfig">#The below statements will print to the terminal upon opening bash window
 echo "Welcome, SeeBenProgram!"
 echo "Personal settings have been loaded from ~/.bash_profile"
 echo "Happy Coding!"
@@ -218,7 +220,22 @@ export USER="SeeBenProgram"
               </li>
             </ul>
           </li>
+          <li>
+            <input type="checkbox">
+            Change MacOS default screenshot folder
+            <ul>
+              <li>
+                Create folder <code>~/Pictures/<strong>Screenshots</strong></code>
+              </li>
+              <li>
+                <button onclick="copyToClipboard('#screenshot')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="screenshot">defaults write com.apple.screencapture location ~/Pictures/Screenshots</code>
+              </li>
+            </ul>
+          </li>
         </ol>
+        <hr>
     
     <!-- Link to JS -->
 
