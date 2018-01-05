@@ -5,3 +5,7 @@ function copyToClipboard(element) {
   document.execCommand("copy");
   $temp.remove();
 }
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
