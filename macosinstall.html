@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Link to Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+  <!-- Link to Font Awesome for 'Copy' button icon -->
+  <script src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+  <title>MacOS | Web Dev Setup</title>
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="container">
+      <h1 class="h1">Fresh Mac?</h1> 
+      <h2 class="h2"> Need Developer Stuff Setup? <small class="text-muted">Install these...</small></h2> 
+
+      <!-- To download/install from the internet -->
+      <hr>
+      <h3>From the internet:</h3>
+
+        <ol>
+          <li>
+            <input type="checkbox" name="chrome">
+            <a href="https://www.google.com/chrome/browser/desktop/index.html" target="_blank">Google Chrome</a> 
+            <small>(Sign in with seebenprogram&ltat&gtgmail credentials)</small>
+          </li>
+          <li>
+            <input type="checkbox" name="firefox">
+            <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a> 
+            <small>(Sign in with ben&ltat&gtseebenprogram credentials)</small>
+          </li>
+          <li>
+            <input type="checkbox" name="spectacle">
+            <a href="https://www.spectacleapp.com/" target="_blank">Spectacle</a> 
+            <small>(Window sizing application)</small>
+          </li>
+          <li>
+            <input type="checkbox" name="sublime">
+            <a href="https://www.sublimetext.com/3" target="_blank">Sublime Text 3</a> 
+            <small>(Text Editor)</small>
+            <ul>
+              <li>Add License Key</li>
+              <li>Turn on Package Control through 'Tools' Top Menu</li>
+              <li>Access package control command menu: <kbd>command + shift + P</kbd></li>
+              <li>Download/Install 'Emmet' via package control</li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" name="sequelpro">
+            <a href="https://sequelpro.com/download" target="_blank">Sequel Pro</a>
+          </li>
+          <li>
+            <input type="checkbox" name="mamp">
+            <a href="https://www.mamp.info/en/downloads/" target="_blank">MAMP</a>
+          </li>
+        </ol>
+
+        <!-- To download/install via Terminal -->
+        <hr>
+        <h3>via Terminal:</h3>
+
+        <ol>
+          <li>
+            <input type="checkbox">
+            <a href="https://brew.sh/" target="_blank">Homebrew - Package Manager</a>
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#homebrew')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="homebrew">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox">
+            <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#node')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="node">brew install node</code> 
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox">
+            <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">Heroku CLI</a> (Heroku Toolbelt)
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#heroku')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="heroku">brew install heroku/brew/heroku</code> 
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox">
+            <a href="https://yarnpkg.com/en/docs/install" target="_blank">yarn</a>
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#yarn')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="yarn">brew install yarn</code>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <input type="checkbox">
+            <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">mySQL</a>
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#mysql')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="mysql">brew install mysql</code>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <input type="checkbox">
+            <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">SSH/RSA key setup</a>
+            <ul>
+              <li>Follow the comprehensive instructions found at <a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">GitHub</a></li>
+              <li>Add SSH key to GitHub Repo and Host(s)</li>
+            </ul>
+          </li>
+        </ol>
+        
+        <!-- MacOS App Store -->
+        <hr>
+        <h3>From the MacOS App Store:</h3>
+        <ol>
+          <li>
+            <input type="checkbox">
+            Slack
+          </li>
+          <li>
+            <input type="checkbox">
+            Xcode <small>(this one takes forever to download and install)</small>
+          </li>
+        </ol>
+
+        <!-- Other things -->
+        <hr>
+        <h3>Other things:</h3>
+        <ol>
+          <li>
+            <input type="checkbox">
+            Terminal Configuration
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#vimbash')"><i class="far fa-clipboard"></i> Copy</button>
+                <code id="vimbash">vim ~/.bash_profile</code>
+              </li>
+              <li> 
+              Paste the following into the <code>.bash_profile</code> file
+              <br>
+              <button onclick="copyToClipboard('#terminalconfig')"><i class="far fa-clipboard"></i> Copy</button>
+<pre><code id="terminalconfig">#The below statements will print to the terminal upon opening bash window
+echo "Welcome, SeeBenProgram!"
+echo "Personal settings have been loaded from ~/.bash_profile"
+echo "Happy Coding!"
+echo "======================================================="
+
+#The below command changes the terminal prompt environment
+orange=$(tput setaf 166);
+yellow=$(tput setaf 228);
+green=$(tput setaf 71);
+white=$(tput setaf 15);
+bold=$(tput bold);
+reset=$(tput sgr0);
+
+PS1="\[${bold}\]\n";
+PS1+="\[${orange}\]\u"; # username
+PS1+="\[${white}\] @ ";
+PS1+="\[${yellow}\]\h";  # host
+PS1+="\[${white}\] in ";
+PS1+="\[${green}\]\w";   # working directory
+PS1+="\n";
+PS1+="\[${white}\]>> \[${reset}\]"; # '>>' and reset color
+export PS1;
+
+#The below command sets the User name
+export USER="SeeBenProgram"
+</code></pre>
+            </li>
+          </ul>
+          <li>
+            <input type="checkbox">
+            <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">Git</a> Configuration
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#gitconfig1')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="gitconfig1">git config --global user.name "Ben Garcia"</code>
+              </li>
+              <li>
+                <button onclick="copyToClipboard('#gitconfig2')"><i class="far fa-clipboard"></i> Copy</button>
+                $ 
+                <code id="gitconfig2">git config --global user.email ben@seebenprogram.com</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox">
+            Show hidden files
+            <ul>
+              <li>
+                <button onclick="copyToClipboard('#hiddenfiles')"><i class="far fa-clipboard"></i> Copy</button>
+                $ 
+                <code id="hiddenfiles">defaults write com.apple.finder AppleShowAllFiles YES</code>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox">
+            Change MacOS default screenshot folder
+            <ul>
+              <li>
+                Create folder <code>~/Pictures/<strong>Screenshots</strong></code>
+              </li>
+              <li>
+                <button onclick="copyToClipboard('#screenshot')"><i class="far fa-clipboard"></i> Copy</button> 
+                $ 
+                <code id="screenshot">defaults write com.apple.screencapture location ~/Pictures/Screenshots</code>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <hr>
+    
+    <!-- Link to JS -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+    <!-- scripts.js -->
+    <script type="text/javascript" src="./js/scripts.js"></script>
+
+  </div> <!-- End wrapper -->
+</body>
+</html>
