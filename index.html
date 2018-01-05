@@ -12,6 +12,8 @@
   <!-- Link to Font Awesome for 'Copy' button icon -->
   <script src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 <body>
     <!-- Wrapper -->
@@ -70,7 +72,7 @@
             <a href="https://brew.sh/" target="_blank">Homebrew - Package Manager</a>
             <ul>
               <li>
-                <button onclick="copyToClipboard('#homebrew')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#homebrew')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="homebrew">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</code>
               </li>
@@ -81,7 +83,7 @@
             <a href="https://nodejs.org/en/" target="_blank">Node.js</a>
             <ul>
               <li>
-                <button onclick="copyToClipboard('#node')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#node')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="node">brew install node</code> 
               </li>
@@ -92,7 +94,7 @@
             <a href="https://devcenter.heroku.com/articles/heroku-cli" target="_blank">Heroku CLI</a> (Heroku Toolbelt)
             <ul>
               <li>
-                <button onclick="copyToClipboard('#heroku')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#heroku')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="heroku">brew install heroku/brew/heroku</code> 
               </li>
@@ -103,7 +105,7 @@
             <a href="https://yarnpkg.com/en/docs/install" target="_blank">yarn</a>
             <ul>
               <li>
-                <button onclick="copyToClipboard('#yarn')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#yarn')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="yarn">brew install yarn</code>
               </li>
@@ -115,7 +117,7 @@
             <a href="https://dev.mysql.com/downloads/mysql/" target="_blank">mySQL</a>
             <ul>
               <li>
-                <button onclick="copyToClipboard('#mysql')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#mysql')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="mysql">brew install mysql</code>
               </li>
@@ -155,11 +157,11 @@
             Terminal Configuration
             <ul>
               <li>
-                <button onclick="copyToClipboard('#vimbash')"><i class="far fa-copy"></i> Copy</button>
+                <button onclick="copyToClipboard('#vimbash')"><i class="far fa-clipboard"></i> Copy</button>
                 <code id="vimbash">vim ~/.bash_profile</code>
               </li>
               <li>
-              <button onclick="copyToClipboard('#terminalconfig')"><i class="far fa-copy"></i> Copy</button> 
+              <button onclick="copyToClipboard('#terminalconfig')"><i class="far fa-clipboard"></i> Copy</button> 
               Paste the following into the <code>.bash_profile</code> file
 <pre><code id="terminalconfig">#The below statements will print to the terminal upon opening bash window
 echo "Welcome, SeeBenProgram!"
@@ -195,12 +197,12 @@ export USER="SeeBenProgram"
             <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup" target="_blank">Git</a> Configuration
             <ul>
               <li>
-                <button onclick="copyToClipboard('#gitconfig1')"><i class="far fa-copy"></i> Copy</button> 
+                <button onclick="copyToClipboard('#gitconfig1')"><i class="far fa-clipboard"></i> Copy</button> 
                 $ 
                 <code id="gitconfig1">git config --global user.name "Ben Garcia"</code>
               </li>
               <li>
-                <button onclick="copyToClipboard('#gitconfig2')"><i class="far fa-copy"></i> Copy</button>
+                <button onclick="copyToClipboard('#gitconfig2')"><i class="far fa-clipboard"></i> Copy</button>
                 $ 
                 <code id="gitconfig2">git config --global user.email ben@seebenprogram.com</code>
               </li>
@@ -211,7 +213,7 @@ export USER="SeeBenProgram"
             Show hidden files
             <ul>
               <li>
-                <button onclick="copyToClipboard('#hiddenfiles')"><i class="far fa-copy"></i> Copy</button>
+                <button onclick="copyToClipboard('#hiddenfiles')"><i class="far fa-clipboard"></i> Copy</button>
                 $ 
                 <code id="hiddenfiles">defaults write com.apple.finder AppleShowAllFiles YES</code>
               </li>
@@ -223,6 +225,12 @@ export USER="SeeBenProgram"
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
     <!-- scripts.js -->
     <script type="text/javascript" src="./js/scripts.js"></script>
