@@ -49,8 +49,143 @@
         <h2 class="h2">Basic Commands <small class="text-muted">memorize these...</small></h2>
         <hr>
 
-        <p>Content goes here</p>
+        <p>
+          Official reference for all things <strong>Git</strong> can be found <a href="https://git-scm.com/doc" target="_blank">here</a>.
+        </p>
         <hr>
+
+        <h3 class="h3">Day-to-Day Big Picture <small class="text-muted">working alone...</small></h3>
+        <ol>
+          <li>Pull down code from remote repo to local machine</li>
+          <li>Code a bunch</li>
+          <li>Commit changes</li>
+          <li>Push changes back to remote repo</li>
+        </ol>
+
+        <h3 class="h3">Day-to-Day Big Picture <small class="text-muted">working with others...</small></h3>
+        <ol>
+          <li>Pull down code from remote repo to local machine</li>
+          <li>Create your own branch</li>
+          <li>Code a bunch</li>
+          <li>Commit changes</li>
+          <li>Push changes back to remote repo</li>
+          <li>Changes merged into remote master branch</li>
+        </ol>
+
+        <h3 class="h3">Git Command Library <small class="text-muted">of commonly used commands...</small></h3>
+        <ul>
+          <li>
+            Initialize a Git Repo:<br>
+            <button onclick="copyToClipboard('#gitinit')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitinit">git init</code>
+          </li>
+          <li>
+            Clone a Git Repo:<br>
+            <button onclick="copyToClipboard('#gitclone')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitclone">git clone </code><code>url-of-repo-to-clone-goes-here</code>
+          </li>
+          <li>
+            See the status of a Git Repo:<br>
+            <button onclick="copyToClipboard('#gitstatus')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitstatus">git status</code>
+          </li>
+          <li>
+            Add file(s) to staging:<br>
+            <button onclick="copyToClipboard('#gitaddall')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitaddall">git add all</code> or,<br>
+            <button onclick="copyToClipboard('#gitadd')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitadd">git add </code><code>file-name-goes-here</code>
+          </li>
+
+          <li>
+            Remove file from staging:<br>
+            <button onclick="copyToClipboard('#gitremove')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitremove">git rm "</code><code>file-name-go-here"</code>
+          </li>
+          <li>
+            Commit changes to master branch:<br>
+            <button onclick="copyToClipboard('#gitcommit')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitcommit">git commit -m "</code><code>Your-commit-remarks-go-here"</code>
+          </li>
+          <li>
+            Push code to remote master branch:<br>
+            <button onclick="copyToClipboard('#gitpush')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitpush">git push origin master</code>
+          </li>
+          <li>
+            Pull in remote's code, master branch:<br>
+            <button onclick="copyToClipboard('#gitpull')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitpull">git pull origin master</code>
+          </li>
+          <li>
+            See what's different between 2 versions of code:<br>
+            <button onclick="copyToClipboard('#gitdiff')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitdiff">git diff</code>
+          </li>
+          <li>
+            Create a branch called "feature-name-here":<br>
+            <button onclick="copyToClipboard('#gitbranch')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitbranch">git branch </code><code>feature-name-here</code> then, <br>
+            <button onclick="copyToClipboard('#gitcheckout')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitcheckout">git checkout </code><code>feature-name-here</code>
+            <br>or the combo shortcut, <br>
+            <button onclick="copyToClipboard('#gitcheckoutfeature')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitcheckoutfeature">git checkout -b </code><code>feature-name-here</code>
+          </li>
+          <li>
+            Undo all changes since the last commit you've made:<br>
+            <button onclick="copyToClipboard('#gitundo')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitundo">git checkout -- </code><code>file-name-goes-here</code>
+          </li>
+          <li>
+            Merge changes (from master to branch, first checkout branch):<br>
+            <button onclick="copyToClipboard('#gitmergemaster')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitmergemaster">git merge master</code>
+          </li>
+          <li>
+            Tell Git which files to ignore (there should be many ignored files), add them to:<br>
+            <button onclick="copyToClipboard('#gitignore')"><i class="far fa-clipboard"></i> Copy</button> 
+            $ <code id="gitignore">vim .gitignore</code>
+          </li>
+          <li>
+            One of the innumerable ways to see git commit history:<br>
+            <button onclick="copyToClipboard('#gitlog')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitlog">git log</code>
+            <br>or other fun ways:<br>
+            <button onclick="copyToClipboard('#gitloglong1')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitloglong1">git log --graph --oneline --decorate --all</code><br>
+            <button onclick="copyToClipboard('#gitloglong2')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitloglong2">git log --pretty=format:"%h - %an, %ar : %s"</code><br>
+            <button onclick="copyToClipboard('#gitloglong3')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitloglong3">git log --pretty=format:"%h %s" --graph</code>
+          </li>
+        </ul>
+        <hr>
+
+        <h3 class="h3">Need-to-know Definitions</h3>
+        <ul>
+          <li><strong>Repository</strong> - Container for snapshots and history, *not* a server</li>
+          <li><strong>Remote</strong> - Connection to another repository somewhere in the world, like a URL</li>
+          <li><strong>Commit</strong> - Basic unit of history. Contains author/date/time/comments/tree</li>
+          <li><strong>Reference</strong> - A pointer to a Commit. Cheap, easy, to create, move, destroy</li>
+          <li><strong>Branch</strong> - A kind of reference, when you add a commit to one, git moves it</li>
+          <li><strong>Head</strong> - Points to the branch that you’re on</li>
+          <li><strong>Working directory</strong> - Sandbox, like any other set of files except that Git watches it</li>
+          <li><strong>Index</strong> - aka staging area, proposal for next snapshot, changes are copied here from the working directory</li>
+          <li><strong>Merge</strong> - a commit that combines two separate lines of history</li>
+        </ul>
+        <hr>
+
+        <h3>Git Clone <small class="text-muted">what happens?...</small></h3>
+
+        <ol>
+          <li>A new folder named after the remote repo is created</li>
+          <li>It is initialized as a Git repo</li>
+          <li>A remote name origin is created, pointing to the URL your cloned from</li>
+          <li>*All* of the repo's files and commits are downloaded there</li>
+          <li>The default branch (usually called 'master') is checked out</li>
+        </ol>
+
 
         <!-- All content above here --> <!-- All content above here --> <!-- All content above here -->
       </div> <!-- End wrapper -->
