@@ -98,9 +98,9 @@
           </li>
 
           <li>
-            Remove file from staging:<br>
+            Remove file from staging (but keep code changes):<br>
             <button onclick="copyToClipboard('#gitremove')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitremove">git rm "</code><code>file-name-go-here"</code>
+            $ <code id="gitremove">git reset HEAD -- </code><code class="text-muted">file-name-goes-here</code>
           </li>
           <li>
             Commit changes to master branch:<br>
