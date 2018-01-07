@@ -132,10 +132,11 @@
           That's really tedious to type, so... Let's make up a command name of our own (an alias)!
         </p>
         <ul>
-          <li>In your root directory, you'll add aliases to your <code>.bash_profile</code></li>
+          <li>In your root directory, you'll add aliases with $ <code id="alias">vim .bash_profile</code></li>
           <li>And the syntax looks like this:</li>
 <pre><code>alias prettylog='git log --pretty=format:"%h - %an, %ar : %s"'
 </code></pre>
+          <li>Then, refresh the bash shell environment with $ <code>source ~/.bash_profile</code></li>
           <li>
             And now, when you give the command $ <code>prettylog</code>, <br>terminal actually runs $ <code>git log --pretty=format:"%h - %an, %ar : %s"</code>
           </li>
