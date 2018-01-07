@@ -185,7 +185,53 @@
           <li>*All* of the repo's files and commits are downloaded there</li>
           <li>The default branch (usually called 'master') is checked out</li>
         </ol>
+        <hr>
 
+        <h3>Don't Index That!</h3>
+        <p>
+          Tons of files shouldn't be indexed by Git for a variety of reasons.
+        </p>
+        <ul>
+          <li>
+            Add individual files to be ignored within the scope a specific git repo:<br>
+            <button onclick="copyToClipboard('#gitignore1')"><i class="far fa-clipboard"></i> Copy</button>
+            $ <code id="gitignore1">vim .gitignore</code>
+          </li>
+          <li>
+            Tell Git to globally ignore files (system wide):
+            <ol>
+              <li>Create a <code>.gitignore</code> file in your home directory</li>
+              <li>
+                <button onclick="copyToClipboard('#gitignore3')"><i class="far fa-clipboard"></i> Copy</button>
+<pre><code id="gitignore3"># Some good ideas for a global .gitignore file
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# WebStorm
+.idea/
+
+# vi
+*~
+
+# General
+log/
+*.log
+
+# etc...
+</code></pre>
+              </li>
+              <li>
+                Then, tell Git where the global .gitignore file is:<br>
+                <button onclick="copyToClipboard('#gitignore2')"><i class="far fa-clipboard"></i> Copy</button>
+                $ <code id="gitignore2">git config --global core.excludesfile ~/.gitignore</code>
+              </li>
+            </ol>
+          </li>            
+        </ul>
 
         <!-- All content above here --> <!-- All content above here --> <!-- All content above here -->
       </div> <!-- End wrapper -->
