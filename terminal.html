@@ -13,7 +13,7 @@
     <!-- Link to Font Awesome for 'Copy' button icon -->
     <script src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
 
-    <title>Web Dev | &ltchange&gt</title>
+    <title>Web Dev | Terminal Commands</title>
   </head>
   <body>
 
@@ -94,11 +94,52 @@
         </ul> <!-- End Nav Bar -->
         <!-- All content below here --> <!-- All content below here --> <!-- All content below here -->
 
-        <h1 class="h1">Title</h1>
-        <h2 class="h2">Subtitle <small class="text-muted">nested remarks...</small></h2>
+        <h1 class="h1">MacOS Terminal</h1>
+        <h2 class="h2">Commands <small class="text-muted">and shortcuts...</small></h2>
         <hr>
 
-        <p>Content goes here</p>
+        <h3 class="h3">Terminal Shortcuts</h3>
+        <ul>
+          <li>
+            Move cursor between words with: <kbd>option + right arrow</kbd> or <kbd>option + left arrow</kbd>
+          </li>
+          <li>
+            Delete the word left of the cursor with: <kbd>control + w</kbd>
+          </li>
+          <li>
+            Move cursor to the far right of the line with: <kbd>control + e</kbd>
+          </li>
+          <li>
+            Move cursor to the far left of the line with: <kbd>control + a</kbd>
+          </li>
+          <li>
+            Delete the entire line left of the cursor with: <kbd>control + u</kbd>
+          </li>
+          <li>
+            Delete the entire line right of the cursor with: <kbd>control + k</kbd>
+          </li>
+        </ul>
+        <hr>
+
+        <h3 class="h3">Make an Alias <small class="text-muted">some next-level stuff...</small></h3>
+        <p>
+          Do you find yourself using the same terminal commands over and over again? And perhaps are they super long or difficult to remember?
+        </p>
+        <p>
+          Consider if you had to run this command all the time: <code>git log --pretty=format:"%h - %an, %ar : %s"</code>
+        </p>
+        <p>
+          That's really tedious to type, so... Let's make up a command name of our own (an alias)!
+        </p>
+        <ul>
+          <li>In your root directory, you'll add aliases to your <code>.bash_profile</code></li>
+          <li>And the syntax looks like this:</li>
+<pre><code>alias prettylog='git log --pretty=format:"%h - %an, %ar : %s"'
+</code></pre>
+          <li>
+            And now, when you give the command $ <code>prettylog</code>, <br>terminal actually runs $ <code>git log --pretty=format:"%h - %an, %ar : %s"</code>
+          </li>
+        </ul>
         <hr>
 
         <!-- All content above here --> <!-- All content above here --> <!-- All content above here -->
