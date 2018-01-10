@@ -132,7 +132,7 @@
           <li>
             Clone a Git Repo:<br>
             <button onclick="copyToClipboard('#gitclone')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitclone">git clone </code><code>url-of-repo-to-clone-goes-here</code>
+            $ <code id="gitclone">git clone </code><code class="text-muted">url-of-repo-to-clone-goes-here</code>
           </li>
           <li>
             See the status of a Git Repo:<br>
@@ -144,7 +144,7 @@
             <button onclick="copyToClipboard('#gitaddall')"><i class="far fa-clipboard"></i> Copy</button> 
             $ <code id="gitaddall">git add all</code> or,<br>
             <button onclick="copyToClipboard('#gitadd')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitadd">git add </code><code>file-name-goes-here</code>
+            $ <code id="gitadd">git add </code><code class="text-muted">file-name-goes-here</code>
           </li>
 
           <li>
@@ -155,7 +155,7 @@
           <li>
             Commit changes to master branch:<br>
             <button onclick="copyToClipboard('#gitcommit')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitcommit">git commit -m "</code><code>Your-commit-remarks-go-here"</code>
+            $ <code id="gitcommit">git commit -m "</code><code class="text-muted">Your-commit-remarks-go-here"</code>
           </li>
           <li>
             Push code to remote master branch:<br>
@@ -175,17 +175,17 @@
           <li>
             Create a branch called "feature-name-here":<br>
             <button onclick="copyToClipboard('#gitbranch')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitbranch">git branch </code><code>feature-name-here</code> then, <br>
+            $ <code id="gitbranch">git branch </code><code class="text-muted">feature-name-here</code> then, <br>
             <button onclick="copyToClipboard('#gitcheckout')"><i class="far fa-clipboard"></i> Copy</button>
-            $ <code id="gitcheckout">git checkout </code><code>feature-name-here</code>
+            $ <code id="gitcheckout">git checkout </code><code class="text-muted">feature-name-here</code>
             <br>or the combo shortcut, <br>
             <button onclick="copyToClipboard('#gitcheckoutfeature')"><i class="far fa-clipboard"></i> Copy</button>
-            $ <code id="gitcheckoutfeature">git checkout -b </code><code>feature-name-here</code>
+            $ <code id="gitcheckoutfeature">git checkout -b </code><code class="text-muted">feature-name-here</code>
           </li>
           <li>
             Undo all changes since the last commit you've made:<br>
             <button onclick="copyToClipboard('#gitundo')"><i class="far fa-clipboard"></i> Copy</button> 
-            $ <code id="gitundo">git checkout -- </code><code>file-name-goes-here</code>
+            $ <code id="gitundo">git checkout -- </code><code class="text-muted">file-name-goes-here</code>
           </li>
           <li>
             Merge changes (from master to branch, first checkout branch):<br>
