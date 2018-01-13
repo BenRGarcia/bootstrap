@@ -106,12 +106,29 @@
 
         <h3 class="h3">Day-to-Day Big Picture <small class="text-muted">working alone...</small></h3>
         <ol>
-          <li>Pull down code from remote repo to local machine</li>
+          <li>Create Repo on GitHub, clone to your machine</li>
           <li>Code a bunch</li>
+          <li>Add files to staging</li>
           <li>Commit changes</li>
           <li>Push changes back to remote repo</li>
+          <li>Perpetually epeat steps 2-5</li>
         </ol>
 
+        <p>In other words, after Repo created on GitHub</p>
+
+        <ol>
+          <li><code>$ git clone <small class="text-muted">username@host:/path/to/repository</small></code></li>
+        </ol>
+
+        <p>Then code a bunch in your text editor... then</p>
+
+        <ol>
+          <li><code>$ git add <small class="text-muted">file-name-here</small></code></li>
+          <li><code>$ git commit -m "<small class="text-muted">commit-message-here</small>"</code></li>
+          <li><code>$ git push origin master</code></li>
+        </ol>
+
+        <hr>
         <h3 class="h3">Day-to-Day Big Picture <small class="text-muted">working with others...</small></h3>
         <ol>
           <li>Pull down code from remote repo to local machine</li>
@@ -121,7 +138,8 @@
           <li>Push changes back to remote repo</li>
           <li>Changes merged into remote master branch</li>
         </ol>
-
+        
+        <hr>
         <h3 class="h3">Git Command Library <small class="text-muted">of commonly used commands...</small></h3>
         <ul>
           <li>
